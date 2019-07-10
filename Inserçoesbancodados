@@ -1,1 +1,25 @@
+insert into cliente_tem_sessao_assento_em_sala (sessao_idsessao,assento_idassento,sala_idSala,cliente_idCliente)
+VALUES(4, 1, 1, 1);
+
+insert into assento(idassento)
+values (1);
+
+insert into sala (idSala,nomeSala)
+Values (1,'Sala1');
+
+insert into sessao (idsessao,horaInicio,horaTermino,preco_idpreco,filme_idFilmes)
+Values (1,'2000-09-04 18:00','2000-09-04 22:00',10,1);
+
+insert into filme(idFilmes,nomeFilmes,dataDeLancamento,tresD)
+VALUES (1,"Test",'2000-09-04',1);
+
+insert into preco(idpreco,preco,tipoEntrada)
+VALUES	(1,10.0,1);
+
+insert into funcionario(idFuncionario,nomeFuncionário,dataNascimento,cep,endereco,cpf,senha,usuario,tipo)
+VALUES (1,"Arthur",'2000-09-04',88350100,"JoaoBauer",11,"123123","1",1);
+
+insert into cliente(idCliente,nomeCliente,dataNascimento,cep,endereco,cpf,senha,usuario)
+VALUES (1,"Arthur",'2000-09-04',88350100,"JoaoBauer",1,"123123","1");
+
 
