@@ -1,25 +1,37 @@
-insert into cliente_tem_sessao_assento_em_sala (sessao_idsessao,assento_idassento,sala_idSala,cliente_idCliente)
-VALUES(4, 1, 1, 1);
 
-insert into assento(idassento)
-values (1);
+## Assento
+INSERT INTO assento(idassento, ocupado)
+VALUES	(1, false),(2, true),(3, true),(4, true);
+## Cliente
+INSERT INTO cliente(nomeCliente, dataNascimento, cep, endereco, cpf, senha, usuario)
+VALUES	("Bruno Amorim","2001-01-03",88350100,"Rua João Bauer",909090909,"senha123","usuario321");
 
-insert into sala (idSala,nomeSala)
-Values (1,'Sala1');
+## Funcionário
+INSERT INTO funcionario(nomeFuncionário, dataNascimento, cep, endereco, cpf, senha, usuario, tipo)
+VALUES	("Bruno Amorim","2001-01-03",88350100,"Rua João Bauer",909090909,"senha123","usuario321", True);
 
-insert into sessao (idsessao,horaInicio,horaTermino,preco_idpreco,filme_idFilmes)
-Values (1,'2000-09-04 18:00','2000-09-04 22:00',10,1);
+## Cliente tem assento em sessão
+INSERT INTO cliente_tem_sessao_assento_em_sala(sessao_idsessao, assento_idassento, sala_idSala, cliente_idCliente)
+VALUES (4, 1, 1,1);
 
-insert into filme(idFilmes,nomeFilmes,dataDeLancamento,tresD)
-VALUES (1,"Test",'2000-09-04',1);
+## Preço
+INSERT INTO preco(preco, tipoEntrada)
+VALUES	(20.00, False),
+		    (16.00, True);
+        
+## Filme
+INSERT INTO filme(nomeFilmes, dataDelancamento, 3D)
+VALUES 	("O RETARDADO: Klas", "2012-02-24", true),
+		    ("O RETARDADO 2: Ismar", "2014-02-24", false);
+        
+## Sessão
+INSERT INTO sessao(horaInicio, horaTermino, preco_idpreco, filme_idFilmes)
+VALUES	('2012-06-18 10:34:09', '2012-06-18 10:34:09', 1, 1);
 
-insert into preco(idpreco,preco,tipoEntrada)
-VALUES	(1,10.0,1);
+## Sala
+INSERT INTO sala(nomeSala)
+VALUES	("Primavera"),
+		    ("Verão");
+        
 
-insert into funcionario(idFuncionario,nomeFuncionário,dataNascimento,cep,endereco,cpf,senha,usuario,tipo)
-VALUES (1,"Arthur",'2000-09-04',88350100,"JoaoBauer",11,"123123","1",1);
-
-insert into cliente(idCliente,nomeCliente,dataNascimento,cep,endereco,cpf,senha,usuario)
-VALUES (1,"Arthur",'2000-09-04',88350100,"JoaoBauer",1,"123123","1");
-
-
+       
